@@ -1,0 +1,22 @@
+{
+  "name": "kata-task-manager",
+  "version": "1.0.0",
+  "description": "*Goal: practice TDD and clean architecture by implementing a task manager*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guiTheret/kata-task-manager.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guiTheret/kata-task-manager/issues"
+  },
+  "homepage": "https://github.com/guiTheret/kata-task-manager#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
