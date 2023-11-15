@@ -26,23 +26,24 @@ const verifyInput = (input) => {
 };
 
 const getNewIndex = (array) => {
-  const max = array.reduce((prev, current) => (prev && prev.id > current.id) ? prev : current)
-  return max+1
+  const max = array.reduce((prev, current) =>
+    prev && prev.id > current.id ? prev : current
+  );
+  return max + 1;
 };
 
 const addTask = (array, input) => {
-  const res = array.find(el => el.description == input);
+  const res = array.find((el) => el.description == input);
 
-  if(res) throw new Error("Task already in list");
-  
+  if (res) throw new Error("Task already in list");
+
   const newTask = {
-  "id": getNewIndex(array),
-  "description": input,
-  "status": "todo"
-  }
+    id: getNewIndex(array),
+    description: input,
+    status: "todo",
+  };
   array.push(newTask);
   return array;
-
 };
 
 const removeTask = () => {};
