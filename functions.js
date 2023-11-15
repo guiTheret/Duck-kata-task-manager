@@ -25,9 +25,18 @@ const verifyInput = (input) => {
   return "Invalid input";
 };
 
-const addTask = () => {};
+const addTask = (array, input) => {
+  const res = array.find(el => el == input);
+
+  if(res) {
+    throw new Error("Task already in list");
+  } else {
+    
+  }
+};
+
 const removeTask = () => {};
 const updateTask = () => {};
 const listTasks = () => {};
 
-module.exports = { verifyInput };
+module.exports = { verifyInput, addTask };

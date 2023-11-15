@@ -1,4 +1,5 @@
-const { verifyInput } = require("./functions");
+const { describe } = require("node:test");
+const { verifyInput, addTask } = require("./functions");
 const readline = require("readline");
 
 describe("verifyInput", () => {
