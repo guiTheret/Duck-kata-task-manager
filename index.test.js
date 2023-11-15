@@ -1,4 +1,3 @@
-const { describe } = require("node:test");
 const { verifyInput, addTask } = require("./functions");
 const readline = require("readline");
 
@@ -30,7 +29,7 @@ describe("checkAddInput", () => {
 
     const existingTask = "test";
 
-    expect(() => addTask([...testArray], existingTask)).toThrowError(
+    expect(() => addTask(testArray, existingTask)).toThrowError(
       "Task already in list"
     );
   });

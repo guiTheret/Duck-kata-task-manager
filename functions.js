@@ -33,6 +33,8 @@ const getNewIndex = (array) => {
 };
 
 const addTask = (array, input) => {
+  console.log("lsdafasf", array);
+
   const res = array.find((el) => el.description == input);
 
   if (res) throw new Error("Task already in list");
