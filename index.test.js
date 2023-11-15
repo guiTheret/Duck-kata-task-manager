@@ -47,7 +47,7 @@ describe("checkAddInput", () => {
 
     const newArray = addTask([...testArray], inputTask);
 
-    expect(newArray).toHaveLength(testArray + 1);
+    expect(newArray).toHaveLength(testArray.length + 1);
     expect(newArray[newArray.length - 1]).toEqual({
       id: expect.any(Number),
       description: inputTask,
