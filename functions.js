@@ -1,3 +1,9 @@
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
 const getPrompt = async () => {
   const prompt = await new Promise((resolve) => {
     rl.question(
@@ -7,10 +13,21 @@ const getPrompt = async () => {
       }
     );
   });
-  // check if first character is + - x o or q, if not return error
-  if (!"+-xoq".includes(prompt[0])) {
-    return "Error";
-  }
 };
 
-module.exports = { getPrompt };
+const verifyInput = (input) => {
+  if (input.startsWith("+")) return addTask(input);
+  if (input.startsWith("-")) return removeTask(input);
+  if (input.startsWith("x")) return updateTask(input);
+  if (input.startsWith("o")) return updateTask(input);
+  //if q exit
+  if (input === "q") return "exit";
+  return "Invalid input";
+};
+
+const addTask = () => {};
+const removeTask = () => {};
+const updateTask = () => {};
+const listTasks = () => {};
+
+module.exports = { verifyInput };
